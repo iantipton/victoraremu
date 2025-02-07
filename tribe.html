@@ -8,10 +8,7 @@
       name="description"
       content="Unlock career opportunities with our sleek digital CV template."
     />
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <link href="./assets/css/styles.css" rel="stylesheet" />
-    
-   </head>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
@@ -200,117 +197,158 @@
 
           <!-- CONTENT -->
           <main class="space-y-4">
-            <!-- PROJECTS -->
+            <!-- POST -->
             <div class="rounded-xl bg-white p-1.5">
-              <h2
-                class="flex items-center gap-x-2.5 px-4 pt-2.5 text-base font-medium before:h-1.5 before:w-1.5 before:rounded-full before:bg-blue-600"
+              <a
+                href="projects.html"
+                class="inline-flex items-center justify-center gap-x-4 rounded-md bg-blue-600 px-4 py-2.5 font-medium text-white duration-150 hover:bg-blue-700"
+                style="margin-bottom: 10px"
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    d="M10 6l-6 6 6 6M4 12h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
                 Projects
-              </h2>
+              </a>
 
-              <div x-data="projectsList" class="mt-4 space-y-1.5">
-                <template x-for="project in projectsList">
+              <!-- <div class="aspect-h-3 aspect-w-5 overflow-hidden rounded-md">
+                <img
+                  src="./assets/images/thumbnail.jpg"
+                  alt=""
+                  class="object-cover object-center"
+                />
+              </div> -->
+
+              <div class="rounded-md bg-gray-50 p-4">
+                <h1 class="mt-1.5 font-medium">
+                  The Tribe Project - Empowering Communities Through Connection
+                </h1>
+
+                <div
+                  class="prose prose-sm mt-4 max-w-none border-t border-dashed border-gray-200 pt-4"
+                >
+                  <p>
+                    Tribe is a powerful and user-friendly app designed to
+                    connect volunteers and support providers with those in need,
+                    fostering a strong sense of community. Whether you’re
+                    offering your skills or seeking assistance, Tribe makes it
+                    easy to find, connect, and manage support with just a few
+                    taps.
+                  </p>
+                  <p>
+                    For those seeking help, the app streamlines the process of
+                    finding local volunteers and support providers, ensuring a
+                    quick and seamless experience. Users can also securely make
+                    payments and manage their support, giving them full control
+                    over their wellbeing.
+                  </p>
+
                   <div
-                    class="rounded-md bg-gray-50 p-4 duration-150 hover:bg-gray-100"
+                    class="flex flex-row gap-2 justify-center flex-wrap"
+                    style="gap: 10px"
                   >
-                    <div class="flex flex-col gap-4 sm:flex-row">
-                      <img
-                        x-bind:src="project.icon"
-                        alt=""
-                        class="size-12 rounded-full border-2 border-white shadow-sm"
-                      />
-
-                      <div class="w-full">
-                        <h3 class="font-medium" x-text="project.name"></h3>
-
-                        <div
-                          class="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-600"
-                        >
-                          <div class="flex items-center gap-x-1.5">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              class="size-3.5"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M3.087 9h17.826a1 1 0 0 1 .997 1.083l-.833 10a1 1 0 0 1-.997.917H3.92a1 1 0 0 1-.996-.917l-.834-10A1 1 0 0 1 3.087 9M4.84 19h14.32l.667-8H4.174zm8.574-14H20a1 1 0 0 1 1 1v1H3V4a1 1 0 0 1 1-1h7.414z"
-                              />
-                            </svg>
-                            <span
-                              class="text-xs font-medium"
-                              x-text="project.category"
-                            ></span>
-                          </div>
-
-                          <div class="flex items-center gap-x-1.5">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              class="size-3.5"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M20 22h-2v-2a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3v2H4v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5zm-8-9a6 6 0 1 1 0-12a6 6 0 0 1 0 12m0-2a4 4 0 1 0 0-8a4 4 0 0 0 0 8"
-                              />
-                            </svg>
-                            <span
-                              class="text-xs font-medium"
-                              x-text="project.role"
-                            ></span>
-                          </div>
-
-                          <div class="flex items-center gap-x-1.5">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 24 24"
-                              class="size-3.5"
-                            >
-                              <path
-                                fill="currentColor"
-                                d="M9 1v2h6V1h2v2h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1zm11 10H4v8h16zm-9 2v4H6v-4zM7 5H4v4h16V5h-3v2h-2V5H9v2H7z"
-                              />
-                            </svg>
-                            <span
-                              class="text-xs font-medium"
-                              x-text="project.date"
-                            ></span>
-                          </div>
-                        </div>
-
-                        <p
-                          class="mt-4 max-w-lg text-gray-600"
-                          x-html="project.description"
-                        ></p>
-
-                        <a
-                          x-bind:href="project.website"
-                          class="group mt-4 inline-flex items-center gap-x-2 text-blue-600"                          
-                          rel="noopener noreferrer"
-                        >
-                          <!-- <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            class="size-4"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"
-                            />
-                          </svg> -->
-                          <span
-                            class="font-medium group-hover:underline group-hover:underline-offset-4"                            
-                          >
-                          Read More
-                          </span>
-                        </a>
-                      </div>
-                    </div>
+                    <img
+                      src="./assets/images/tribe_screenshot_1.jpeg"
+                      srcset="
+                        ./assets/images/tribe_screenshot_1@2x.jpg  2x,
+                        ./assets/images/tribe_screenshot_1@3x.jpeg 3x
+                      "
+                      width="180"
+                      class="rounded-md"
+                    />
+                    <img
+                      src="./assets/images/tribe_screenshot_2.jpeg"
+                      srcset="
+                        ./assets/images/tribe_screenshot_2@2x.jpg  2x,
+                        ./assets/images/tribe_screenshot_2@3x.jpeg 3x
+                      "
+                      width="180"
+                      class="rounded-md"
+                    />
+                    <img
+                      src="./assets/images/tribe_screenshot_3.jpeg"
+                      srcset="
+                        ./assets/images/tribe_screenshot_3@2x.jpg  2x,
+                        ./assets/images/tribe_screenshot_3@3x.jpeg 3x
+                      "
+                      width="180"
+                      class="rounded-md"
+                    />
                   </div>
-                </template>
+
+                  <p><b>Key Features</b></p>
+                  <ul>
+                    <li>
+                      <b>Seamless Volunteer & Support Matching</b> - Easily find
+                      and connect with local volunteers or support providers.
+                    </li>
+                    <li>
+                      <b>Effortless Support Management</b> - Organize ongoing or
+                      one-time assistance with an intuitive interface.
+                    </li>
+                    <li>
+                      <b>Secure Payments</b> - Integrated Stripe payment
+                      processing for safe and reliable transactions.
+                    </li>
+                    <li>
+                      <b>Real-Time Notifications</b> - Stay updated on requests,
+                      responses, and transactions.
+                    </li>
+                  </ul>
+
+                  <p><b>Technologies Used</b></p>
+                  <ul>
+                    <li>
+                      <b>Kotlin</b> - Modern, concise, and efficient development
+                      for Android.
+                    </li>
+                    <li>
+                      <b>AndroidX</b> - Flexible UI design for a smooth user
+                      experience.
+                    </li>
+                    <li>
+                      <b>Push Notifications</b> - Real-time updates to keep
+                      users informed.
+                    </li>
+                    <li>
+                      <b>Apollo</b> - Efficient GraphQL API communication.
+                    </li>
+                    <li>
+                      <b>Stripe</b> - Secure and seamless payment processing..
+                    </li>
+                  </ul>
+
+                  <p>
+                    Developing Tribe allowed me to combine my expertise in
+                    Kotlin and GraphQL with a mission-driven project that brings
+                    real value to communities. By leveraging cutting-edge
+                    technology, Tribe provides a seamless and empowering
+                    experience for users looking to give or receive support.
+                  </p>
+
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.bronzelabs.tribevolunteer"
+                    target="_new"
+                  >
+                    <img
+                      src="./assets/images/GetItOnGooglePlay_Badge_Web_color_English.png"
+                      width="180"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
-            <!--// PROJECTS -->
+            <!--// POST -->
           </main>
           <!--// CONTENT -->
         </div>
